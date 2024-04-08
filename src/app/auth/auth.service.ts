@@ -4,13 +4,20 @@ import { environment } from 'src/environments/environment.development';
 import { Authdata } from './authdata.interface';
 import { HttpClient } from '@angular/common/http';
 import { JwtHelperService } from '@auth0/angular-jwt';
+import { Register } from '../models/register.interface';
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
   apiUrl=environment.apiUrl 
   private authSub =new BehaviorSubject<Authdata|null>(null)
+
+  user$ = this.authSub.asObservable()
+
   /* jwtToken = new JwtHelperService(); */
+
+
+
   constructor(private http:HttpClient) { }
   login(data:{email:string ; password:string;}){
     console.log(data);
@@ -23,4 +30,12 @@ export class AuthService {
       localStorage.setItem('user', JSON.stringify(data))
     }))
   }
+
+  register(data:Partial<Register>) {
+   return this.http.post(`${this.apiUrl}register`, data)
+  
+
+    
+  }
+
 }

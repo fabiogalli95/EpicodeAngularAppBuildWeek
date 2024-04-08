@@ -1,5 +1,5 @@
 {
-   "post": [
+  "post": [
     {
       "userId": 1,
       "id": 1,
@@ -1203,24 +1203,33 @@
   ],
   "users": [
     {
-    "email": "dario@dario.com",
-      "password": "$2a$10$ZLY63quWnMVo0lO951uFdOJRfUxeo8U6YJ/Cue06Vgp4Ad8S/CjaC",
-      "name": "Dario",
+      "email": "fabio.gallingani95@gmail.com",
+      "password": "$2a$10$Uq98yRVhQ/jKBSG6uekW8uKJUrMMS9ozmCcRo9F/EQpRYEiDlRTfy",
+      "username": "fabio",
+      "surname": "sdasda",
+      "user": [
+        "fabio",
+        "sdasda"
+      ],
+      "id": 1
+    },
+    {
+      "email": "fabio.gallingani@gmail.com",
+      "password": "$2a$10$7jxOHALh..gatC/VvRcF9OT/s4R04rImN4kDtKRpvzj77H5Vn1tSW",
+      "username": "fabio",
+      "surname": "sdasda",
+      "user": [
+        "fabio",
+        "sdasda"
+      ],
       "id": 2
-  },
-  {
-    "email": "fabio@fabio.com",
-      "password": "111111",
-      "name": "Dario",
-      "id": 3
-  }
-],
-"favorites": [
+    }
+  ],
+  "favorites": [
     {
       "userId": 2,
       "postId": 460465,
       "id": 6
     }
-]
-
+  ]
 }
