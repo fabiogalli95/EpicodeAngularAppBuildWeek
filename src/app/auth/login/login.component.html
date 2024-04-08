@@ -1,0 +1,28 @@
+<h1 class="text-success-emphasis">Accedi</h1>
+
+<form class="w-25" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+  <input
+    type="email"
+    name="email"
+    formControlName="email"
+    class="form-control"
+    placeholder="email"
+  />
+
+  <input
+    type="password"
+    name="password"
+    formControlName="password"
+    class="form-control"
+    placeholder="password"
+  />
+
+  <button
+    type="submit"
+    [disabled]="!loginForm.valid"
+    class="btn btn-primary btn-rounded"
+    mdbRipple
+  >
+    Submit
+  </button>
+</form>
