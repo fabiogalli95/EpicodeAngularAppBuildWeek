@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Form, FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AuthService } from '../auth.service';
 import { Register } from 'src/app/models/register.interface';
 
@@ -11,6 +11,7 @@ import { Register } from 'src/app/models/register.interface';
 })
 export class RegisterComponent implements OnInit{
 formSub!:FormGroup;
+  router: any;
 constructor(private fb:FormBuilder, private srvAuth : AuthService){}
 ngOnInit(): void {
   this.formSub = this.fb.group({
@@ -40,7 +41,9 @@ submit(){
   const user:Partial<Register>=this.formSub.value;
 
   this.srvAuth.register(user).subscribe((elem)=>{
-    console.log(elem);
+  /*   let data={email:this.formSub.value.email,password:this.formSub.value.password}
+   this.srvAuth.login(data)
+    console.log(elem); */
   })
 }
 controllo(val: string) {  
