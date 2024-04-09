@@ -13,6 +13,7 @@ export class AuthService {
   private authSub =new BehaviorSubject<Authdata|null>(null)
 
   user$ = this.authSub.asObservable()
+  router: any;
 
   /* jwtToken = new JwtHelperService(); */
 
@@ -30,12 +31,19 @@ export class AuthService {
       localStorage.setItem('user', JSON.stringify(data))
     }))
   }
+/* iniToken(){
+  const user=localStorage.getItem('user');
+  if(user){
 
+  }
+} */
+logout() {
+  this.authSub.next(null);
+  localStorage.removeItem('user');
+  this.router.navigate(['/login']);
+}
   register(data:Partial<Register>) {
    return this.http.post(`${this.apiUrl}register`, data)
-  
-
-    
   }
 
 }

@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { AuthService } from '../auth.service';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -8,7 +9,8 @@ import { AuthService } from '../auth.service';
 })
 export class LoginComponent implements OnInit {
 loginForm!: FormGroup;
-constructor(private authSrv:AuthService) { }
+@Output() log = new EventEmitter<string>();
+constructor(private authSrv:AuthService, private router:Router) { }
 ngOnInit(): void {
   
 
@@ -18,8 +20,13 @@ ngOnInit(): void {
   });
 
 }
+
 onSubmit() {
-this.authSrv.login(this.loginForm.value).subscribe()
+this.authSrv.login(this.loginForm.value).subscribe(
+ /* (data)=> {this.router.navigate(['/'])} */
+(data)=>{
+  this.log.emit('true')}
+)
 
 }
 

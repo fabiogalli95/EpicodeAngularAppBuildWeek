@@ -1223,6 +1223,17 @@
         "sdasda"
       ],
       "id": 2
+    },
+    {
+      "email": "fabio.gallingani95d@gmail.comd",
+      "password": "$2a$10$.Bgs11XtSDd7UeLJaBJT2u0Y9AokppbU91ESCDlqp09JSJ83I0Nie",
+      "username": "fabio",
+      "surname": "sdasda",
+      "user": [
+        "fabio",
+        "sdasda"
+      ],
+      "id": 3
     }
   ],
   "favorites": [

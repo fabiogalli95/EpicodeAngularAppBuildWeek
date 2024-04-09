@@ -1,2 +1,5 @@
-<app-navbar></app-navbar>
+<div *ngIf="log">
+    <app-navbar></app-navbar>
+</div>
+<app-login *ngIf="!log" (log)="haNdleevent($event)"></app-login>
 <router-outlet></router-outlet>
