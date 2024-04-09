@@ -1,1 +1,13 @@
-<p>mannacc tt e sabat</p>
+<div class="container">
+    <button type="button" class="btn btn-dark" (click)="home()" mdbRipple>Home</button>
+    <button type="button" class="btn btn-dark" (click)="handlePostActive()" mdbRipple>Active</button>
+    <button type="button" class="btn btn-dark" (click)="handlePostActive()" mdbRipple>Inactive</button>
+    <div class="d-flex flex-row flex-wrap justify-content-between" >
+        <div class="" *ngFor="let key of post" >
+            <app-single-post  *ngIf="completed" [keyPost]="key"></app-single-post>
+            <app-single-post *ngIf="completed&&key.completed" [keyPost]="key"></app-single-post>
+            <app-single-post *ngIf="!completed&&!key.completed" [keyPost]="key"></app-single-post>
+        </div>
+    </div>
+
+</div>
