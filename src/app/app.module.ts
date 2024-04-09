@@ -26,13 +26,15 @@ import { MdbValidationModule } from 'mdb-angular-ui-kit/validation';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavbarComponent } from './navbar/navbar.component';
 import { HomeComponent } from './components/home/home.component';
+import { SinglePostComponent } from './components/home/single-post/single-post.component';
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     RegisterComponent,
     NavbarComponent,
-    HomeComponent
+    HomeComponent,
+    SinglePostComponent
   ],
   imports: [
     BrowserModule,

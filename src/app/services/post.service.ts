@@ -10,7 +10,7 @@ export class PostService {
   constructor(private http:HttpClient) { }
   getPosts(id:number){
 
-    return this.http.get<Post>(`${this.apiUrl}/posts?userId=${id}`);
+    return this.http.get<Post[]>(`${this.apiUrl}post?userId=${id}`);
     
   }
 }

@@ -1245,6 +1245,17 @@
         "lepore"
       ],
       "id": 4
+    },
+    {
+      "email": "gianluca.giacchetta@gmail.com",
+      "password": "$2a$10$JwhWDt2uDs2ltWh8zyn2wunC4YzfMbJZvDIZwTRuy8pJVDMiGM61i",
+      "username": "gianluca",
+      "surname": "giacchetta",
+      "user": [
+        "gianluca",
+        "giacchetta"
+      ],
+      "id": 5
     }
   ],
   "favorites": [
