@@ -25,7 +25,9 @@ onSubmit() {
 this.authSrv.login(this.loginForm.value).subscribe(
  /* (data)=> {this.router.navigate(['/'])} */
 (data)=>{
-  this.log.emit('true')}
+  this.log.emit('true')
+  this.router.navigate(['/home'])
+}
 )
 
 }

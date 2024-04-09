@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AuthService } from '../auth/auth.service';
 
 
 
@@ -10,10 +11,13 @@ import { Component } from '@angular/core';
 })
 export class NavbarComponent {
 
+
    userJson = localStorage.getItem('user');
   user = this.userJson ? JSON.parse(this.userJson) : null;
-  constructor(){
+  constructor( private authSrv: AuthService) { }
 
+  
+  logOut(){
+    this.authSrv.logout();
   }
-
 }

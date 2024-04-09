@@ -63,7 +63,7 @@
               alt=""
               loading="lazy"
             />
-            <strong class="d-none d-sm-block ms-1">{{user.user.username}} {{user.user.surname}}</strong>
+            <strong class="d-none d-sm-block ms-1" (click)="logOut()">{{user.user.username}} {{user.user.surname}}</strong>
           </a>
         </li>
         <li class="nav-item me-3 me-lg-1">

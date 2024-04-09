@@ -1234,6 +1234,17 @@
         "sdasda"
       ],
       "id": 3
+    },
+    {
+      "email": "lepore@gmail.com",
+      "password": "$2a$10$PWox1pArcuE6LCfiRDpBYuKoxOMBmppQ13jvVPBw4iWEBxbhMO3sy",
+      "username": "giovanni",
+      "surname": "lepore",
+      "user": [
+        "giovanni",
+        "lepore"
+      ],
+      "id": 4
     }
   ],
   "favorites": [
